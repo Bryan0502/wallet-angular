@@ -1,0 +1,32 @@
+/* Estilos para el ion-header */
+ion-header {
+  background: #f8f8f8; /* Color de fondo */
+}
+
+/* Estilos para ion-content */
+ion-content {
+  display: flex;
+  flex-direction: column; /* Asegura que el contenido se alinee verticalmente */
+  justify-content: center;
+  align-items: center;
+  padding: 0; /* Remueve el padding para evitar desbordamientos */
+  margin: 0; /* Remueve el margen */
+  box-sizing: border-box; /* Incluye padding y border en el tamaño total */
+}
+
+
+/* Estilos para el formulario */
+form {
+  width: 100%; /* Ancho completo del contenedor */
+  max-width: 400px; /* Ancho máximo para mantener un diseño adecuado */
+  margin: 0 auto; /* Centra el formulario horizontalmente */
+  padding: 1rem; /* Padding interno para el formulario */
+  box-sizing: border-box; /* Incluye padding en el tamaño total */
+}
+
+.login-logo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}

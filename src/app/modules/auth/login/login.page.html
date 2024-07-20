@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="no-scroll" padding>
+  <div class="login-logo">
+    <h1 class="ion-text-center">Bienvenido a Billetera Digital</h1>
+    <p class="ion-text-center">Inicia sesión para continuar</p>
+    <img src="../../../../assets/billetera_digital.png" alt="logo" loading="lazy" style="width: 150px; height: auto;" />
+  </div>
+    
+  <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+    <ion-item>
+      <ion-label position="floating">Correo</ion-label>
+      <ion-input formControlName="username"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input type="password" formControlName="password"></ion-input>
+    </ion-item>
+
+    <ion-button expand="full" type="submit" [disabled]="loginForm.invalid">
+      Login
+    </ion-button>
+  </form>
+</ion-content>

@@ -1,0 +1,48 @@
+.profile-card {
+  display: inline-flex; /* Ajusta el tamaño al contenido y alinea en línea */
+  align-items: center; /* Centra verticalmente el contenido */
+  background-color: var(--ion-color-background); /* Fondo oscuro */
+  border-radius: 12px; /* Bordes redondeados */
+  padding: 4px 8px; /* Espaciado interno, ajustado para un mejor diseño */
+  color: var(--ion-color-text); /* Color del texto */
+}
+  
+  .profile-avatar {
+    display: inline-flex; /* Flexbox para centrar el contenido del avatar */
+    align-items: center; /* Centra verticalmente la imagen */
+    justify-content: center; /* Centra horizontalmente la imagen */
+    width: 5vw; /* Tamaño de la imagen */
+    height: 5vw; /* Tamaño de la imagen */
+  }
+  
+  .profile-avatar img {
+    width: 5vw; /* Tamaño de la imagen */
+    height: 5vw; /* Tamaño de la imagen */
+    border-radius: 50%; /* Hace que la imagen sea redonda */
+  }
+  
+  .profile-info {
+    display: inline-flex; /* Flexbox para alinear el texto */
+    align-items: center; /* Centra verticalmente el texto */
+    margin-left: 1vw;
+  }
+  
+  .profile-name {
+    font-size: 5vw; /* Tamaño del texto */
+    font-family: 'Roboto', sans-serif; /* Fuente del texto */
+  }
+  
+  .upper-items {
+    display: flex;
+    justify-content: space-between; /* Distribuye los elementos con espacio entre ellos */
+    align-items: center; /* Centra verticalmente los elementos */
+  }
+
+  ion-button {
+    --padding-start: 0;
+    --padding-end: 0;
+    --padding-top: 0;
+    --padding-bottom: 0;
+    --background: transparent;
+    --color: var(--ion-color-primary-contrast);
+  }
