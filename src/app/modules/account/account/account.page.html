@@ -8,5 +8,7 @@
 </ion-header>
 
 <ion-content class="no-scroll">
-<p>CUENTAS PARA CARGAR</p>
+  <div *ngFor="let account of accounts">
+    <app-account-card [account]="account"></app-account-card>
+  </div>
 </ion-content>

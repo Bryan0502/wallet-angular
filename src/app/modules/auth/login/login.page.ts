@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AuthService } from '../../../services/auth.service';
+import { AuthService } from '../../../services/auth/auth.service';
 import { ToastController } from '@ionic/angular';
 
 @Component({
@@ -43,12 +43,12 @@ export class LoginPage implements OnInit {
 
       try {
         // Llama al método de login del servicio
-        const userId = await this.authService.login(username, password);
+        const user = await this.authService.login(username, password);
 
-        if (userId) {
+        if (user) {
           // Si el login fue exitoso, guarda el userId en el localStorage
-          localStorage.setItem('username', username);
-          localStorage.setItem('userid', userId);
+          localStorage.setItem('username', user.name);
+          localStorage.setItem('userid', user.userId);
 
           // Limpiar los campos antes de navegar
           this.loginForm.get('username')?.setValue('');
