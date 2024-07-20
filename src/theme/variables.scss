@@ -22,3 +22,27 @@
   ion-toolbar {
     --background: var(--ion-color-toolbar-background);
   }
+
+  /* Estilo para ion-toast */
+ion-toast {
+  --background: var(--ion-color-background); /* Fondo del toast */
+  --color: var(--ion-color-text); /* Color del texto */
+  --border-radius: 10px; /* Radio de borde */
+  --padding: 16px; /* Espaciado interno */
+  --font-family: var(--ion-font-family); /* Fuente */
+  --font-size: 14px; /* Tamaño de fuente */
+  --max-width: 90vw; /* Ancho máximo */
+  --margin: 10px; /* Margen */
+}
+
+/* Estilo para el toast de éxito */
+ion-toast.success {
+  --background: var(--ion-color-primary); /* Fondo para éxito */
+  --color: var(--ion-color-primary-contrast); /* Color del texto en éxito */
+}
+
+/* Estilo para el toast de error */
+ion-toast.error {
+  --background: var(--ion-color-secondary); /* Fondo para error */
+  --color: var(--ion-color-background); /* Color del texto en error */
+}

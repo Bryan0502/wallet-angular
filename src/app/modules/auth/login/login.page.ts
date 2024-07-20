@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthService } from '../../../services/auth.service';
+import { ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +14,9 @@ export class LoginPage implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private router: Router
+    private router: Router,
+    private authService: AuthService,
+    private toastController: ToastController
   ) {
     this.initializeForm();
   }
@@ -28,25 +32,61 @@ export class LoginPage implements OnInit {
 
   private initializeForm() {
     this.loginForm = this.formBuilder.group({
-      username: ['', Validators.required],
+      username: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required]
     });
   }
-
-  onLogin() {
+  
+  async onLogin() {
     if (this.loginForm.valid) {
-      // Aquí puedes manejar la lógica de autenticación
-      console.log('Login successful:', this.loginForm.value);
+      const { username, password } = this.loginForm.value;
 
-      // Guardar el nombre de usuario en el almacenamiento local
-      const username = this.loginForm.get('username')?.value;
-      localStorage.setItem('username', username);
+      try {
+        // Llama al método de login del servicio
+        const userId = await this.authService.login(username, password);
 
-      // Limpiar los campos antes de navegar
-      this.loginForm.get('username')?.setValue('');
-      this.loginForm.get('password')?.setValue('');
+        if (userId) {
+          // Si el login fue exitoso, guarda el userId en el localStorage
+          localStorage.setItem('username', username);
+          localStorage.setItem('userid', userId);
 
-      this.router.navigate(['/home']); // Navega a la página de inicio después del login
+          // Limpiar los campos antes de navegar
+          this.loginForm.get('username')?.setValue('');
+          this.loginForm.get('password')?.setValue('');
+
+          await this.showToast('success-toast','Inicio de Sesión Correcto'); // Muestra el toast de éxito
+          
+          // Navega a la página de inicio después del login
+          this.router.navigate(['/home']);
+        } else {
+          // Maneja el error aquí, mostrando un mensaje de error
+          console.log('Login failed');
+          await this.showToast('error-toast','Credenciales Incorrectas'); // Muestra el toast de error
+        }
+      } catch (error) {
+        // Maneja errores de red o inesperados
+        console.error('Login error:', error);
+        await this.showToast('error-toast','Error de Inicio de Sesión'); // Muestra el toast de error
+      }
     }
   }
+
+  async showToast(toastId: string, message: string) {
+    // Crear el toast con el mensaje proporcionado
+    const toast = await this.toastController.create({
+      message: message,
+      duration: 3000,
+      color: toastId === 'success-toast' ? 'success' : 'danger',
+      position: 'top',
+      buttons: [
+        {
+          text: 'Close',
+          role: 'cancel'
+        }
+      ]
+    });
+    await toast.present();
+  }
+
+  
 }
