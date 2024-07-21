@@ -48,15 +48,16 @@ email: bryanfront@gmail.com
 contraseña: contrapro
 ```
 2. Ver tus cuentas en la pestaña de cuentas.
-3. Realizar una transferencia entre tus cuentas.
-4. Ver tu historial de transacción para ver tu último movimiento.
+3. Crear una cuenta nueva
+4. Realizar una transferencia entre tus cuentas.
+5. Ver en tu historial de transacción tu último movimiento.
 
 ## Funcionalidades
 Lista de funcionalidades activas:
 * Inicio de Sesión
 * Listado de Cuentas
 * Creación de Cuentas
-* Transferencia de dinero entre cuentas
+* Transferencia de Dinero entre Cuentas
 * Listado de Historial de Transferencias
 
 Lista TODOs para desarrollo futuro:
