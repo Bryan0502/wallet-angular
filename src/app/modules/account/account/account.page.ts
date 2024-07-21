@@ -13,7 +13,7 @@ import { AccountModalComponent } from '../../../components/account-modal/account
 export class AccountPage implements OnInit {
   accounts: Account[] = []; // Almacena todas las cuentas
   displayedAccounts: Account[] = []; // Almacena las cuentas que se muestran actualmente
-  batchSize: number = 10; // Define el tamaño del lote
+  batchSize: number = 5; // Define el tamaño del lote
 
   constructor(
     private accountsService: AccountsService,
