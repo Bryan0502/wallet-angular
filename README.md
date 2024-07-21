@@ -48,7 +48,7 @@ email: bryanfront@gmail.com
 contraseña: contrapro
 ```
 2. Ver tus cuentas en la pestaña de cuentas.
-3. Crear una cuenta nueva
+3. Crear una cuenta nueva.
 4. Realizar una transferencia entre tus cuentas.
 5. Ver en tu historial de transacción tu último movimiento.
 
