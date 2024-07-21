@@ -8,6 +8,7 @@
 </ion-header>
 
 <ion-content>
+
   <div *ngFor="let account of displayedAccounts">
     <app-account-card [account]="account"></app-account-card>
   </div>
@@ -16,4 +17,16 @@
     <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Cargando más datos...">
     </ion-infinite-scroll-content>
   </ion-infinite-scroll>
+
+  <ion-fab slot="fixed" horizontal="end" vertical="bottom" class="fab-bottom-left">
+    <ion-fab-button>
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button (click)="openAccountModal()">
+        <ion-icon name="cash-outline"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+  
 </ion-content>
