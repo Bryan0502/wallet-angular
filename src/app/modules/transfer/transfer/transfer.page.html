@@ -8,5 +8,39 @@
 </ion-header>
 
 <ion-content>
-  <p>FUNCION DE TRANSFERIR</p>
+  <div class="transfer-container">
+    <!-- Selector de cuenta de origen -->
+    <div class="form-group">
+      <ion-label class="form-label">Cuenta de Origen</ion-label>
+      <ion-select #originSelect [(ngModel)]="originAccountKey" (ionChange)="onOriginAccountChange($event)" placeholder="Selecciona cuenta de origen" cancelText="Cancelar" okText="Seleccionar">
+        <ion-select-option *ngFor="let account of accounts" [value]="account.key">{{ account.accountName }}</ion-select-option>
+      </ion-select>
+    </div>
+
+    <!-- Icono de transferencia -->
+    <div class="icon-container">
+      <ion-icon name="swap-vertical-outline" class="transfer-icon"></ion-icon>
+    </div>
+
+    <!-- Selector de cuenta destino -->
+    <div class="form-group">
+      <ion-label #destinationSelect class="form-label">Cuenta de Destino</ion-label>
+      <ion-select #destinationSelect [(ngModel)]="destinationAccountKey" (ionChange)="onDestinationAccountChange($event)" placeholder="Selecciona cuenta de destino" cancelText="Cancelar" okText="Seleccionar">
+        <ion-select-option *ngFor="let account of accounts" [value]="account.key">{{ account.accountName }}</ion-select-option>
+      </ion-select>
+    </div>
+
+    <!-- Campo para ingresar la cantidad -->
+    <div class="form-group">
+      <ion-label class="form-label">Cantidad</ion-label>
+      <ion-input [(ngModel)]="ammount" type="number" placeholder="Ingrese la cantidad"></ion-input>
+    </div>
+
+    <!-- Botón para realizar la transferencia -->
+    <ion-footer>
+      <ion-button expand="full" color="primary" (click)="transfer()">Transferir</ion-button>
+    </ion-footer>
+  </div>
+
 </ion-content>
+

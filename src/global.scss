@@ -56,7 +56,13 @@ ion-content {
   color: var(--ion-color-text); /* Color del texto en el contenido */
 }
 
+ion-card, ion-card-content, ion-card-header{
+  background-color: #f8f8f8;
+}
 
+ion-card-title, ion-card-subtitle {
+  font-weight: 600;
+}
 
 /* Theme variables */
 
@@ -71,7 +77,7 @@ ion-content {
 
 .custom-toolbar .toolbar-content ion-title {
   font-size: 10vw; /* Tamaño de fuente relativo al ancho de la ventana de visualización */
-  font-family: 'Roboto', sans-serif !important;
+  font-family: var(--ion-font-family) !important;
   position: relative !important;
   padding-left: 0 !important;
   padding-top: 6vw !important;
@@ -91,7 +97,7 @@ ion-content {
 }
 
 .custom-title {
-  font-family: 'Roboto', sans-serif;
+  font-family: var(--ion-font-family);
   display: flex !important;
   width: 100%;
   overflow: hidden; /* Oculta el contenido que se desborda */

@@ -20,11 +20,13 @@ export class AccountPage implements OnInit {
       // Manejar el caso en que userId es null
       console.error('No se encontró el userId en localStorage.');
       // Aquí podrías redirigir al usuario o mostrar un mensaje
-    } else {
-      this.accountsService.getAccountsByUserId(userId).subscribe(accounts => {
-        this.accounts = accounts;
-        this.displayedAccounts = this.accounts.slice(0, this.batchSize);
-      });
+    } 
+    else {
+      this.accountsService.getAccountsByUserId(userId);
+        this.accountsService.accounts$.subscribe(accounts => {
+          this.accounts = accounts; // Aquí puedes usar los datos también
+          this.displayedAccounts = this.accounts.slice(0, this.batchSize);
+        });
     }
   }
 

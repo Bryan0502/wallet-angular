@@ -77,10 +77,10 @@ export class LoginPage implements OnInit {
       message: message,
       duration: 3000,
       color: toastId === 'success-toast' ? 'success' : 'danger',
-      position: 'top',
+      position: 'bottom',
       buttons: [
         {
-          text: 'Close',
+          text: 'Cerrar',
           role: 'cancel'
         }
       ]

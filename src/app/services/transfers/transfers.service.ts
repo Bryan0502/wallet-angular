@@ -18,7 +18,7 @@ export class TransfersService {
           changes.map(c => {
             const data = c.payload.val() as Transfer;
             return { ...data, key: c.payload.key }; // Asegura que `key` se asigne después y no se sobrescriba
-          })
+          }).reverse()
         )
       );
   }

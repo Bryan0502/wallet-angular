@@ -13,7 +13,6 @@
   <div *ngFor="let transfer of displayedTransfers">
     <app-transfer-card [transfer]="transfer"></app-transfer-card>
   </div>
-
   <ion-infinite-scroll threshold="100px" (ionInfinite)="loadMore($event)">
     <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Cargando más datos...">
     </ion-infinite-scroll-content>

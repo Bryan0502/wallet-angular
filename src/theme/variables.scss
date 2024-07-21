@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 :root {
-    --ion-color-primary: #cf1c1c; /* Rojo primario */
+    --ion-color-primary: #bd2020; /* Rojo primario */
     --ion-color-primary-rgb: 255, 5, 5;
     --ion-color-primary-contrast: #ffffff; /* Contraste para texto sobre fondo primario */
   
@@ -15,10 +15,11 @@
     --ion-color-text: #ffffff; /* Color del texto */
     --ion-color-text-light: #e0e0e0; /* Texto claro */
 
-    --ion-font-family: 'Roboto', sans-serif;
+    --ion-background-color: #e0e0e0; /* Fondo oscuro */
 
+    --ion-tab-bar-background: #ffff; /* Fondo de la barra de pestañas */
   }
-
+  
   ion-toolbar {
     --background: var(--ion-color-toolbar-background);
   }

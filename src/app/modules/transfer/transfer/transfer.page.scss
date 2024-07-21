@@ -1,0 +1,36 @@
+/* CSS para la pantalla de transferencia */
+.transfer-container {
+    padding: 16px; /* Ajustado para un espaciado adecuado */
+    background-color: #f8f8f8;
+  }
+  
+  .form-group {
+    margin-bottom: 16px;
+    padding: 16px; /* Padding interno para el cuadro */
+    background-color: #ffffff; /* Fondo blanco para los cuadros */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera para profundidad */
+  }
+  
+  .form-label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  
+  .icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 16px 0;
+  }
+  
+  .transfer-icon {
+    font-size: 8vw;
+  }
+  
+  /* Elimina la línea debajo del ion-item */
+  ion-item {
+    --border-style: none;
+  }
+  
