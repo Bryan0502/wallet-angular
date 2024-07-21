@@ -21,7 +21,7 @@ export class AccountsService {
           changes.map(c => {
             const data = c.payload.val() as Account;
             return { ...data, key: c.payload.key }; // Asegura que `key` se asigne después y no se sobrescriba
-          }).reverse()
+          })
         )
       )
       .subscribe(accounts => this.accountsSubject.next(accounts));
