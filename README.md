@@ -55,6 +55,7 @@ contraseña: contrapro
 Lista de funcionalidades activas:
 * Inicio de Sesión
 * Listado de Cuentas
+* Creación de Cuentas
 * Transferencia de dinero entre cuentas
 * Listado de Historial de Transferencias
 
