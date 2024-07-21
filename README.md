@@ -11,45 +11,63 @@ README
 * [Contacto](#contacto)
 
 ## Información General
-This project is simple Lorem ipsum dolor generator.
+Este proyecto es una billetera digital básica utilizando Angular y Ionic.
 
 ## Tecnologías
-Project is created with:
-* Python version: 3.7
-* Django version: 2.2
-* Bootstrap version: 4
+Proyecto creado con:
+* Angular core: 12
+* Ionic Framework: 5
+* Ionic CLI: 6
 
 ## Configuración
-To run this project, install it locally using npm:
+Antes de ejecutar los comandos para levantar el proyecto hay que tener instalado Nodejs
+1. Si tiene nvm puede ejecutar este código:
+```
+nvm install 18.13
+nvm use 18.13
+```
+2. Si no tiene nvm entonces debe instalar Nodejs versión 18.13 que es compatible con el proyecto.
 
+Luego para levantar el proyecto, hay que instalarlo localmente usando npm:
 ```
-$ cd ../lorem
-$ npm install
-$ npm start
+cd ../wallet-angular
+npm install
+set NODE_OPTIONS=--openssl-legacy-provider
+ng serve
 ```
+Se usa el comando set NODE_OPTIONS=--openssl-legacy-provider para que el Nodejs pueda usar el antiguo proveedor de OpenSSL ya que las nuevas versiones no son compatibles con la configuración del proyecto.
+Si se usa otro sistemas operativo que no es Windows como macOS o Linux, entonces se cambia el comando set NODE_OPTIONS=--openssl-legacy-provider por export NODE_OPTIONS=--openssl-legacy-provider
 
 ## Ejemplo de Uso
-Show examples of usage:
+Un flujo funcional de la aplicación sería:
+
+1. Iniciar sesión con las credenciales:
 ```
-put-your-code-here
+email: bryanfront@gmail.com
+contraseña: contrapro
 ```
+2. Ver tus cuentas en la pestaña de cuentas.
+3. Realizar una transferencia entre tus cuentas.
+4. Ver tu historial de transacción para ver tu último movimiento.
 
 ## Funcionalidades
-List of features ready and TODOs for future development
-* Awesome feature 1
-* Awesome feature 2
-* Awesome feature 3
+Lista de funcionalidades activas:
+* Inicio de Sesión
+* Listado de Cuentas
+* Transferencia de dinero entre cuentas
+* Listado de Historial de Transferencias
 
-To-do list:
-* Wow improvement to be done 1
-* Wow improvement to be done 2
+Lista TODOs para desarrollo futuro:
+* Agregar reglas de seguridad en el firebase y medidas de seguridad en la aplicación
+* Implementar Capacitor para generar el apk y probar el app como aplicación móvil
 
 ## Estado
-Project is: _in progress_, _finished_, _no longer continue_ and why?
+El proyecto está: _terminado_
 
 ## Inspiración
-Add here credits. Project inspired by..., based on...
+Este proyecto usa inspiración en la distribución de colores del App de Banco General. Descubrí que el background del ion-content, el background de las cards y el background del ion-tab-bar eran diferentes. Esto para dar una mejor experiencia visual al usuario.
+La distribución de contenido en la pantalla fue parte del anexo que se agregó al reto y otra parte mía que agregué todos los cuadros con border radius en las ion-card.
 
 ## Contacto
-Created by [@flynerdpl](https://www.flynerd.pl/) - feel free to contact me!
+Creado por [@Bryan0502](https://github.com/Bryan0502) - no dudes en contactarme.
 ```
