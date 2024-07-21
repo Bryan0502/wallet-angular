@@ -1,13 +1,13 @@
 README
 
 ## Table of contents
-* [Información General](#general-info)
-* [Tecnologías](#technologies)
-* [Configuración](#setup)
-* [Ejemplo de Uso](#code-examples)
-* [Funcionalidades](#features)
-* [Estado](#status)
-* [Inspiración](#inspiration)
+* [Información General](#información-general)
+* [Tecnologías](#tecnologías)
+* [Configuración](#configuración)
+* [Ejemplo de Uso](#ejemplo-de-uso)
+* [Funcionalidades](#funcionalidades)
+* [Estado](#estado)
+* [Inspiración](#inspiración)
 * [Contacto](#contacto)
 
 ## Información General
