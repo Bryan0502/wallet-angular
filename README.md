@@ -68,8 +68,9 @@ El proyecto está: _terminado_
 
 ## Inspiración
 Este proyecto usa inspiración en la distribución de colores del App de Banco General. Descubrí que el background del ion-content, el background de las cards y el background del ion-tab-bar eran diferentes. Esto para dar una mejor experiencia visual al usuario.
+<br>
+<br>
 La distribución de contenido en la pantalla fue parte del anexo que se agregó al reto y otra parte mía que agregué todos los cuadros con border radius en las ion-card.
 
 ## Contacto
 Creado por [@Bryan0502](https://github.com/Bryan0502) - no dudes en contactarme.
-```
