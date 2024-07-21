@@ -37,6 +37,7 @@ ng serve
 ```
 Se usa el comando set NODE_OPTIONS=--openssl-legacy-provider para que el Nodejs pueda usar el antiguo proveedor de OpenSSL ya que las nuevas versiones no son compatibles con la configuración del proyecto.
 <br>
+<br>
 Si se usa otro sistemas operativo que no es Windows como macOS o Linux, entonces se cambia el comando set NODE_OPTIONS=--openssl-legacy-provider por export NODE_OPTIONS=--openssl-legacy-provider
 
 ## Ejemplo de Uso
