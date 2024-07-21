@@ -1,5 +1,3 @@
-README
-
 ## Tabla de contenido
 * [Información General](#información-general)
 * [Tecnologías](#tecnologías)
