@@ -8,7 +8,7 @@ README
 * [Funcionalidades](#features)
 * [Estado](#status)
 * [Inspiración](#inspiration)
-* [Contacto](#contact)
+* [Contacto](#contacto)
 
 ## Información General
 This project is simple Lorem ipsum dolor generator.
