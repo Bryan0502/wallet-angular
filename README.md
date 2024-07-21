@@ -29,9 +29,10 @@ nvm use 18.13
 Luego para levantar el proyecto, hay que instalarlo localmente usando npm:
 ```
 cd ../wallet-angular
+npm install -g @ionic/cli@6
 npm install
 set NODE_OPTIONS=--openssl-legacy-provider
-ng serve
+ng serve o npm run ng serve
 ```
 Se usa el comando set NODE_OPTIONS=--openssl-legacy-provider para que el Nodejs pueda usar el antiguo proveedor de OpenSSL ya que las nuevas versiones no son compatibles con la configuración del proyecto.
 <br>
