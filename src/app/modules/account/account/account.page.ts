@@ -8,7 +8,9 @@ import { Account } from '../../../services/account/accounts.model'; // Ajusta la
   styleUrls: ['./account.page.scss'],
 })
 export class AccountPage implements OnInit {
-  accounts: Account[] = []; // Almacena las cuentas aquí
+  accounts: Account[] = []; // Almacena todas las cuentas
+  displayedAccounts: Account[] = []; // Almacena las cuentas que se muestran actualmente
+  batchSize: number = 10; // Define el tamaño del lote
 
   constructor(private accountsService: AccountsService) { }
 
@@ -21,8 +23,21 @@ export class AccountPage implements OnInit {
     } else {
       this.accountsService.getAccountsByUserId(userId).subscribe(accounts => {
         this.accounts = accounts;
+        this.displayedAccounts = this.accounts.slice(0, this.batchSize);
       });
     }
   }
 
+  loadMore(event: any) {
+    setTimeout(() => {
+      const nextBatch = this.accounts.slice(this.displayedAccounts.length, this.displayedAccounts.length + this.batchSize);
+      this.displayedAccounts = [...this.displayedAccounts, ...nextBatch];
+
+      event.target.complete();
+
+      if (this.displayedAccounts.length >= this.accounts.length) {
+        event.target.disabled = true;
+      }
+    }, 500); // Simula un retraso en la carga
+  }
 }

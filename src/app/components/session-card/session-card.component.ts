@@ -24,6 +24,7 @@ export class SessionCardComponent implements OnInit {
   logout() {
     // Elimina el username del localStorage
     localStorage.removeItem('username');
+    localStorage.removeItem('userid');
 
     // Redirige al usuario a la página de login
     this.router.navigate(['/login']);

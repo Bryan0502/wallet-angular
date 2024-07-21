@@ -7,8 +7,13 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="no-scroll">
-  <div *ngFor="let account of accounts">
+<ion-content>
+  <div *ngFor="let account of displayedAccounts">
     <app-account-card [account]="account"></app-account-card>
   </div>
+
+  <ion-infinite-scroll threshold="100px" (ionInfinite)="loadMore($event)">
+    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Cargando más datos...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
 </ion-content>
