@@ -1,6 +1,6 @@
 README
 
-## Table of contents
+## Tabla de contenido
 * [Información General](#información-general)
 * [Tecnologías](#tecnologías)
 * [Configuración](#configuración)
